@@ -1,0 +1,27 @@
+# Backend Python requirements
+# FFmpeg is required at runtime by pydub for MP3 audio export and chunk processing.
+# External tools such as Tesseract OCR are also required if using PDF image text extraction.
+
+fastapi==0.109.2
+uvicorn[standard]==0.27.1
+python-multipart==0.0.9
+pydantic==2.6.1
+setuptools==80.9.0
+faster-whisper==1.2.0
+ctranslate2==4.4.0
+transformers==4.37.2
+torch==2.2.0
+bert-score==0.3.13
+deep-translator==1.11.4
+gtts==2.5.1
+pydub==0.25.1
+av==17.0.1
+sentence-transformers==2.3.1
+numpy==1.26.3
+pdfplumber==0.11.5
+langdetect==1.0.9
+pytesseract==0.3.13
+Pillow==10.4.0
+nltk==3.8.1
+scikit-learn==1.4.0
+matplotlib==3.8.2
