@@ -1,48 +1,72 @@
 # AI Multimedia Summarizer
 
-A full-stack AI app for working with video, audio, PDF, and text content.
+A full-stack AI application for processing video, audio, PDF, and text content using modern NLP and speech-processing models.
 
-Features:
-- Transcribe video/audio with Whisper
-- Summarize extracted text with BART
-- Evaluate summary quality
-- Search semantically inside extracted text
-- Translate summaries
-- Generate LDA topic comparison charts
-- Convert summaries to speech
+## Features
+
+* Transcribe video and audio using Whisper
+* Generate AI-powered summaries using BART
+* Evaluate summary quality
+* Semantic search inside extracted text
+* Translate generated summaries
+* Generate LDA topic comparison charts
+* Convert summaries to speech
 
 ## Requirements
 
-Install these before running the project on a new computer:
+Install the following before running the project:
 
-- Node.js 18 or newer
-- npm
-- Python 3.11 64-bit
-- Internet access for first-time AI model downloads
+* Node.js 18 or newer
+* npm
+* Python 3.11 (64-bit)
+* Internet access for first-time AI model downloads
+* FFmpeg
 
-The project already includes FFmpeg here:
+## FFmpeg Installation
+
+This repository does **not** include FFmpeg binaries.
+
+1. Download FFmpeg (Essentials Build) from:
+   https://www.gyan.dev/ffmpeg/builds/
+
+2. Extract the archive.
+
+3. Copy the entire `ffmpeg` folder into:
 
 ```text
-backend/ffmpeg/bin/
+backend/ffmpeg/
 ```
 
-You do not need to install FFmpeg separately unless you remove that folder.
+The resulting structure should look like:
+
+```text
+backend/
+└── ffmpeg/
+    └── bin/
+        ├── ffmpeg.exe
+        ├── ffprobe.exe
+        └── ffplay.exe
+```
+
+The application expects these executables inside `backend/ffmpeg/bin/`.
 
 ## Important GitHub Notes
 
-Do not upload generated dependency/model folders to GitHub.
-
-These are already ignored:
+The following folders should not be committed:
 
 ```text
 node_modules/
 dist/
 backend/venv/
 backend/models/
+backend/ffmpeg/
 backend/__pycache__/
 ```
 
-`backend/models/` is created automatically when the app downloads AI models.
+`backend/models/` is created automatically when AI models are downloaded for the first time.
+
+`backend/ffmpeg/` should be downloaded separately using the instructions above.
+
 
 ## Project Structure
 
